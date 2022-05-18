@@ -1,1 +1,11 @@
-<scale-loading-spinner size="large" text="Loading..."></scale-loading-spinner>
+<div class="display_button" style="float: left">
+  <button (click)="onPress()">display notification</button>
+</div>
+
+<scale-notification-toast
+  variant="informational"
+  opened="display"
+  *ngIf="display"
+>
+  <p slot="header">Informational toast headline</p>
+</scale-notification-toast>
